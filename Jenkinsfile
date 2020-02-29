@@ -7,7 +7,6 @@ pipeline {
                 echo 'cleaning..'
             }
         }
-    }
         stage('Build') {
             steps {
                echo 'Building..'
@@ -22,3 +21,4 @@ pipeline {
             }
         }
     }
+}
