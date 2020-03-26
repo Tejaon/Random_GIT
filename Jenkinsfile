@@ -30,7 +30,13 @@ pipeline {
 
             }
         }
-
+	
+	stage('Maven build') {
+		steps {
+        	buildInfo = rtMaven.run pom: 'build.xml', goals: 'clean install'
+		}
+	}
+	    
         stage('dist') {
 
             steps {
