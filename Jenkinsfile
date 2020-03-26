@@ -1,4 +1,5 @@
-node('Remote') {
+pipeline {
+    agent any
   git url: 'https://github.com/Tejaon/Random_GIT.git'
   def v = version(readFile('build.xml'))
   if (v) {
