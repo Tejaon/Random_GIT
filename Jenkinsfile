@@ -37,7 +37,7 @@ pipeline {
 			  // compute complete workspace path, from current node to the allocated disk
      //   try {
             // run tests in the same workspace that the project was built
- 		sh 'mvn clean install -DskipTests'
+ 		sh "maven clean install -DskipTests"
      //   } catch (e) {
             // if any exception occurs, mark the build as failed
         //    currentBuild.result = 'FAILURE'
