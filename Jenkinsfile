@@ -33,7 +33,7 @@ pipeline {
 	
 	stage('maven build') {
 		steps {
-        	buildInfo = maven.run pom: 'build.xml', goals: 'dist'
+        	maven.run pom: 'build.xml', goals: 'dist'
 		}
 	}
 	    
