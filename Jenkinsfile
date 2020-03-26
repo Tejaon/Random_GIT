@@ -35,18 +35,18 @@ pipeline {
 		steps {
 
 			  // compute complete workspace path, from current node to the allocated disk
-        try {
+     //   try {
             // run tests in the same workspace that the project was built
-            sh 'mvn dist'
-        } catch (e) {
+ 		sh 'mvn clean install -DskipTests'
+     //   } catch (e) {
             // if any exception occurs, mark the build as failed
-            currentBuild.result = 'FAILURE'
-            throw e
-        } finally {
+        //    currentBuild.result = 'FAILURE'
+//throw e
+       // } finally {
             // perform workspace cleanup only if the build have passed
             // if the build has failed, the workspace will be kept
-            cleanWs cleanWhenFailure: false
-        		}
+          //  cleanWs cleanWhenFailure: false
+        //		}
 		}
 	}
 	    
