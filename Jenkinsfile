@@ -14,8 +14,8 @@ pipeline {
 
             steps {
                 echo 'cleaning..'
-				//sh "rm -f RandomGen.jar"
-				//sh "rm -f src/RandomGen.class"
+				sh "rm -f RandomGen.jar"
+				sh "rm -f src/RandomGen.class"
 
             }
         }
