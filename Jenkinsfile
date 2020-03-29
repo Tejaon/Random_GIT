@@ -31,7 +31,7 @@ pipeline {
 
         stage ('Build') {
             steps {
-                sh 'fileExists 'C:\\Users\\tejao\\GIT\\RomanConverter\\build.xml' 
+                fileExists 'C:\\Users\\tejao\\GIT\\RomanConverter\\build.xml
             }
             post {
                 success {
