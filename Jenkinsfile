@@ -42,12 +42,7 @@ pipeline {
 
                 echo 'Tesing....'
 		    junit 'AppTest'
-		    def v = version(readFile('build.xml'))
- 		 if (v) {
-   		 echo "Building version ${v}"
-	 	 def matcher = readFile('build.xml') =~ '<version>(.+)</version>'
-	  	matcher ? matcher[0][1] : null
-  		}
+		    readFile('build.xml')
             }
         }
     }
