@@ -28,13 +28,13 @@ pipeline {
             steps {
 
                echo 'Building..'
-		    build job: 'C:\\Users\\tejao\\GIT\\Ideaproject\\RomanConverter', quietPeriod: 5
-		    mvn compile
+		    mvn 'compile'
 
 
             }
         }
 	
+
 	    
         stage('Test') {
 
@@ -42,6 +42,12 @@ pipeline {
 
                 echo 'Tesing....'
 		    junit 'AppTest'
+		    def v = version(readFile('build.xml'))
+ 		 if (v) {
+   		 echo "Building version ${v}"
+	 	 def matcher = readFile('build.xml') =~ '<version>(.+)</version>'
+	  	matcher ? matcher[0][1] : null
+  		}
             }
         }
     }
