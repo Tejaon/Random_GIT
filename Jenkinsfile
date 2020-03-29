@@ -6,7 +6,6 @@ pipeline {
 		stage ('prework') {
 			steps {
 				    echo "Building version"
-				    git clone 'https://github.com/Tejaon/Random_GIT.git'
 			}
 		}
 
