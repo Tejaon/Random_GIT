@@ -5,7 +5,7 @@ pipeline {
 
 	    stage('git clone') {
             steps {
-               bat 'git clone https://github.com/Tejaon/Random_GIT.git'
+               sh 'git clone https://github.com/Tejaon/Random_GIT.git'
 		}
             }
 		    
