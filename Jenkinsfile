@@ -48,7 +48,7 @@ pipeline {
             steps {
 
                 echo 'Tesing....'
-		    junit 'AppTest'
+		//    junit 'AppTest'
 		                }
         }
     }
