@@ -6,7 +6,7 @@ pipeline {
 		stage ('prework') {
 			steps {
 				    echo "Building version"
-				    git url: 'https://github.com/Tejaon/Random_GIT.git'
+				    git clone 'https://github.com/Tejaon/Random_GIT.git'
 			}
 		}
 
@@ -14,8 +14,6 @@ pipeline {
 
             steps {
                 echo 'cleaning..'
-				sh "rm -f RandomGen.jar"
-				sh "rm -f src/RandomGen.class"
 
             }
         }
@@ -37,7 +35,6 @@ pipeline {
             steps {
 
                 echo 'Tesing....'
-			   sh "jar cvf RandomGen.jar src/RandomGen.class"
             }
         }
     }
