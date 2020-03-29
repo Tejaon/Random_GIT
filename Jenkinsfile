@@ -31,7 +31,7 @@ pipeline {
 
         stage ('Build') {
             steps {
-                sh 'maven -Dmaven.test.failure.ignore=true install' 
+                sh 'fileExists 'C:\\Users\\tejao\\GIT\\RomanConverter\\build.xml' 
             }
             post {
                 success {
