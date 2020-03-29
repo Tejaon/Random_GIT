@@ -33,21 +33,17 @@ pipeline {
             steps {
                 fileExists 'C:\\Users\\tejao\\GIT\\RomanConverter\\build.xml'
 		    dir 'C:\\Users\\tejao\\GIT\\RomanConverter'
+		    echo "build.xml"
 		 //   sh 'ant -file build.xml'
 		  //  sh '"C:\\Program Files\\Java\\jdk-13.0.2\\bin\\java.exe" "-javaagent:C:\\Program Files\\JetBrains\\IntelliJ IDEA Educational Edition 2019.3.3\\lib\\idea_rt.jar=56689:C:\\Program Files\\JetBrains\\IntelliJ IDEA Educational Edition 2019.3.3\\bin" -Dfile.encoding=UTF-8 -classpath C:\\Users\\tejao\\GIT\\Ideaproject\\RomanConverter\\out\\production\\RomanConverter RomanConverter'
             }   
-		post {
-                success {
-                    echo "SUCCESS"
-                }
-            }
         }
     	    
         stage('Test') {
 
             steps {
 
-                echo 'Tesing....'
+                echo "Tesing...."
 		//    junit 'AppTest'
 		                }
         }
