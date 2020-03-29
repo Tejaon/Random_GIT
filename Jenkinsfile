@@ -29,17 +29,19 @@ pipeline {
 
                echo 'Building..'
 		    build job: 'C:\\Users\\tejao\\GIT\\Ideaproject\\RomanConverter', quietPeriod: 5
+		    mvn compile
 
 
             }
         }
 	
 	    
-        stage('dist') {
+        stage('Test') {
 
             steps {
 
                 echo 'Tesing....'
+		    junit 'AppTest'
             }
         }
     }
