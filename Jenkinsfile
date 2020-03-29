@@ -19,15 +19,9 @@ pipeline {
 
             steps {
                 echo 'cleaning..'
-
             }
         }
 
-    tools {
-    maven 'Maven 3.3.9'
-    dk 'jdk8'
-    }
-    stages {
         stage ('Initialize') {
             steps {
                 sh '''
@@ -47,10 +41,7 @@ pipeline {
                 }
             }
         }
-    }
-	
-
-	    
+    	    
         stage('Test') {
 
             steps {
