@@ -28,8 +28,8 @@ pipeline {
 
         stage ('Build') {
             steps {
-                fileExists 'C:\\Users\\tejao\\GIT\\RomanConverter\\build.xml'
-		    dir 'C:\\Users\\tejao\\GIT\\RomanConverter'
+          //      fileExists 'C:\\Users\\tejao\\GIT\\RomanConverter\\build.xml'
+		//    dir 'C:\\Users\\tejao\\GIT\\RomanConverter'
 		    echo "build.xml"
             }   
         }
