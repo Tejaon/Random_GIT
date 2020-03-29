@@ -5,7 +5,7 @@ pipeline {
 
 	    stage('git clone') {
             steps {
-               bash 'git clone https://github.com/Tejaon/Random_GIT.git'
+               		git credentialsId: 'Tejaon', url: 'https://github.com/Tejaon/Random_GIT.git'
 		}
             }
 		    
