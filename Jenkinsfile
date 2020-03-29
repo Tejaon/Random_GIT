@@ -32,7 +32,7 @@ pipeline {
         stage ('Build') {
             steps {
                 fileExists 'C:\\Users\\tejao\\GIT\\RomanConverter\\build.xml'
-		    cd 'C:\\Users\\tejao\\GIT\\RomanConverter'
+		    dir 'C:\\Users\\tejao\\GIT\\RomanConverter'
 		sh 'ant -file build.xml'
             }
             post {
