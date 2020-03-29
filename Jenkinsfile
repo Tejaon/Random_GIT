@@ -28,7 +28,7 @@ pipeline {
             steps {
 
                echo 'Building..'
-		    mvn 'compile'
+		    maven 'compile'
 
 
             }
