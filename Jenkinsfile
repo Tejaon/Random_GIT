@@ -32,10 +32,11 @@ pipeline {
         stage ('Build') {
             steps {
                 fileExists 'C:\\Users\\tejao\\GIT\\RomanConverter\\build.xml'
+		sh 'maven compile'
             }
             post {
                 success {
-                    junit 'target/surefire-reports/**/*.xml' 
+                    echo "SUCCESS"
                 }
             }
         }
