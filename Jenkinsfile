@@ -40,7 +40,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo "Tesing...."
-		    junit 'TestApp'
+		//    junit 'TestApp'
         }
     }
    }
