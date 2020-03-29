@@ -32,6 +32,7 @@ pipeline {
         stage ('Build') {
             steps {
                 fileExists 'C:\\Users\\tejao\\GIT\\RomanConverter\\build.xml'
+		    cd 'C:\\Users\\tejao\\GIT\\RomanConverter'
 		sh 'maven compile'
             }
             post {
