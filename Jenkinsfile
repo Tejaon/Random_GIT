@@ -33,7 +33,7 @@ pipeline {
             steps {
                 fileExists 'C:\\Users\\tejao\\GIT\\RomanConverter\\build.xml'
 		    cd 'C:\\Users\\tejao\\GIT\\RomanConverter'
-		sh 'maven compile'
+		sh 'ant -file build.xml'
             }
             post {
                 success {
