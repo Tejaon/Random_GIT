@@ -1,0 +1,20 @@
+sudo su  -
+
+mkdir -p /opt/docker/
+
+yum install docker -y
+
+docker service start
+service docker enable
+service docker status
+
+
+chmod 770 Dockerfile
+
+
+docker build -t  teja03:test03 /opt/docker/
+
+docker login
+docker push .
+
+
